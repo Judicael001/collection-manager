@@ -1,0 +1,92 @@
+.collection-item-card {
+  position: relative;
+  background: #f0f6ff;
+  border: 1px solid #8ca3c7;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 12rem; /* Largeur fixe */
+  cursor: pointer;
+  margin: 1rem; /* Espacement */
+  display: flex; /* Changé en flex pour meilleur contrôle */
+  flex-direction: column; /* Organisation verticale */
+}
+
+.collection-item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* CORRIGÉ: .rarity-chip au lieu de .rarity */
+.rarity-chip {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: #4a6cf7;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 1; /* S'assure que le badge est au-dessus */
+}
+
+.item-image {
+  margin: 0 0 0.5rem 0; /* Ajustement des marges */
+  text-align: center;
+  min-height: 80px; /* Hauteur minimale pour éviter les décalages */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-image img {
+  max-width: 100%;
+  max-height: 8rem; /* Légèrement réduit */
+  width: auto; /* Maintient le ratio */
+  height: auto; /* Maintient le ratio */
+  border-radius: 8px;
+  object-fit: contain; /* Évite la déformation */
+}
+
+.item-header {
+  margin: 0 0 0.5rem 0; /* Ajusté */
+}
+
+.item-name {
+  font-size: 1.1rem; /* Légèrement réduit pour mieux s'adapter */
+  font-weight: 700;
+  margin: 0;
+  color: #1e2a3a;
+  white-space: nowrap; /* Empêche le retour à la ligne */
+  overflow: hidden; /* Cache le débordement */
+  text-overflow: ellipsis; /* Ajoute ... si le texte est trop long */
+}
+
+.item-description {
+  margin: 0 0 0.75rem 0;
+  color: #334155;
+  font-size: 0.85rem; /* Réduit pour mieux s'adapter */
+  line-height: 1.4;
+  display: -webkit-box;
+  /*-webkit-line-clamp: 3; /* Limite à 3 lignes */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1; /* Prend l'espace disponible */
+}
+
+/* CORRIGÉ: style pour le footer et le prix */
+footer {
+  margin-top: auto; /* Pousse le footer vers le bas */
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(140, 163, 199, 0.3); /* Ligne séparatrice subtile */
+}
+
+.item-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e8a3a;
+  margin: 0;
+  text-align: right; /* Aligné à droite pour meilleur look */
+}
