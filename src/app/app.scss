@@ -1,4 +1,7 @@
-h1 {
-    background-color: black;
-    color: white;
-  }
+.collection-grid {
+  display: flex;
+  width: 100%;
+  gap: 1rem; /* Espacement entre les cartes */
+  flex-wrap: wrap; /* Permet aux cartes de se répartir sur plusieurs lignes */
+  justify-content: center; /* Centrage horizontal */
+}

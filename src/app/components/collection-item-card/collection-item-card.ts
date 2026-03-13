@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { CollectionItem } from '../../models/collection-item';
 
 @Component({
   selector: 'app-collection-item-card',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './collection-item-card.html',
   styleUrl: './collection-item-card.scss',
 })
-export class CollectionItemCard {}
+export class CollectionItemCard {
+
+item = input(new CollectionItem());
+
+}

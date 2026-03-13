@@ -65,14 +65,14 @@
 }
 
 .item-description {
-  margin: 0 0 0.75rem 0;
+  margin: 0.75rem 0;
   color: #334155;
-  font-size: 0.85rem; /* Réduit pour mieux s'adapter */
+  font-size: 0.95rem; /* Réduit pour mieux s'adapter */
   line-height: 1.4;
-  display: -webkit-box;
+  /*display: -webkit-box;*/
   /*-webkit-line-clamp: 3; /* Limite à 3 lignes */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  /*-webkit-box-orient: vertical;*/
+  /*overflow: hidden;*/
   flex-grow: 1; /* Prend l'espace disponible */
 }
 
@@ -80,7 +80,6 @@
 footer {
   margin-top: auto; /* Pousse le footer vers le bas */
   padding-top: 0.5rem;
-  border-top: 1px solid rgba(140, 163, 199, 0.3); /* Ligne séparatrice subtile */
 }
 
 .item-price {
@@ -88,5 +87,4 @@ footer {
   font-weight: 600;
   color: #1e8a3a;
   margin: 0;
-  text-align: right; /* Aligné à droite pour meilleur look */
 }
