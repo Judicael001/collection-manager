@@ -1,6 +1,6 @@
 export class CollectionItem {
 
-    name = "My Figurine";
+    name = "Linx";
     description = "A legendary sword of unmatched sharpners and history.";
     rarity = "Legendary";
     price = 199;

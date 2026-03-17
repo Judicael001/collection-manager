@@ -9,6 +9,6 @@ import { CollectionItem } from '../../models/collection-item';
 })
 export class CollectionItemCard {
 
-item = input(new CollectionItem());
+item = input.required<CollectionItem>();
 
 }

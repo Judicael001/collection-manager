@@ -1,4 +1,16 @@
+<head id="collection-header">
+    <h1>My Collection</h1>
+    <div>
+    <app-search-bar 
+        (submit)="increamentCount()"
+        [(search)]="searchText"
+    >
+    </app-search-bar>
+    Clicked count: {{count}} <br>
+    SearchText: {{searchText}}
+    </div>
+</head>
 <section class="collection-grid">
-    <app-collection-item-card></app-collection-item-card>
-    <app-collection-item-card [item]="coin"></app-collection-item-card>
+    <app-collection-item-card [item]="selectedItem()"></app-collection-item-card>
 </section>
+<button (click)="incrementIndex()">Toggle</button>
