@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import { CollectionItem } from '../../models/collection-item';
 
 @Component({
@@ -6,6 +6,7 @@ import { CollectionItem } from '../../models/collection-item';
   imports: [],
   templateUrl: './collection-item-card.html',
   styleUrl: './collection-item-card.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CollectionItemCard {
 
