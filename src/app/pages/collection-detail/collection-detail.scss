@@ -1,0 +1,27 @@
+#collection-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espace entre le titre et la barre de recherche */
+  margin: 0 1rem; /* Marge horizontale pour éviter que le contenu touche les bords */
+}
+
+.collection-grid {
+  display: flex;
+  width: 100%;
+  gap: 1rem; /* Espacement entre les cartes */
+  flex-wrap: wrap; /* Permet aux cartes de se répartir sur plusieurs lignes */
+  justify-content: center; /* Centrage horizontal */
+}
+
+.centered {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+hr.gold {
+  border-color: goldenrod;
+}
+
+hr.grey {
+  border-style: dashed;
+}
