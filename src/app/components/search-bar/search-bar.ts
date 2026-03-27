@@ -1,4 +1,4 @@
-import { Component, model, output, OutputEmitterRef, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, model, output, OutputEmitterRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -11,13 +11,5 @@ import { FormsModule } from '@angular/forms';
 export class SearchBar {
 
   search = model('Initial');
-
-  searchButtonClicked: OutputEmitterRef<void> = output<void>({
-    alias: 'submit'
-  });
-
-  searchClicked() {
-      this.searchButtonClicked.emit();
-  }
   
 }

@@ -1,25 +1,31 @@
 import { Component, effect, inject, input, OnDestroy, signal } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CollectionItem, Rarities } from '../../models/collection-item';
 import { CollectionItemCard } from '../../components/collection-item-card/collection-item-card';
-import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { CollectionService } from '../../services/collection-service';
 import { Collection } from '../../models/collection';
-import { Subscription } from 'rxjs';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormField } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-collection-item-detail',
-  imports: [ReactiveFormsModule, CollectionItemCard],
+  imports: [ReactiveFormsModule, CollectionItemCard, MatButtonModule,
+  MatFormField, MatInputModule, MatSelectModule
+  ],
   templateUrl: './collection-item-detail.html',
   styleUrl: './collection-item-detail.scss',
 })
 export class CollectionItemDetail implements OnDestroy {
   
-  private fb = inject(FormBuilder);
-  private router = inject(Router);
-  private collectionService = inject(CollectionService);
+  private readonly fb = inject(FormBuilder);
+  private readonly router = inject(Router);
+  private readonly collectionService = inject(CollectionService);
 
-  readonly rarities = Object.values(Rarities);
+  rarities = Object.values(Rarities);
 
   itemId = input<number | null, string | null>(null, {
     alias: 'id',
@@ -85,6 +91,14 @@ export class CollectionItemDetail implements OnDestroy {
     }
   }
 
+  deleteItem() {
+    console.log('Delete item');
+    //ici, je dois ajouter la logique de suppression
+  }
+
+  cancel() {
+    this.router.navigate(['/collections']); // Redirige vers la liste des collections
+  }
 
   ngOnDestroy(): void {
       this.valueChangeSubscription?.unsubscribe();
