@@ -4,7 +4,7 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } 
 import { CollectionItem, Rarities } from '../../models/collection-item';
 import { CollectionItemCard } from '../../components/collection-item-card/collection-item-card';
 import { Subscription } from 'rxjs';
-import { CollectionService } from '../../services/collection-service';
+import { CollectionService } from '../../services/collection/collection-service';
 import { Collection } from '../../models/collection';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormField } from '@angular/material/form-field';

@@ -1,11 +1,20 @@
+// Augmentez la largeur du formulaire
 form {
-    max-width: 300px;
+    max-width: 400px; // Changé de 300px à 500px
+    width: 70%;
+    min-width: 300px; // Largeur minimale pour éviter que les boutons ne se chevauchent
+    background-color: white; // Ajout du fond blanc
+    padding: 1.5rem; // Augmenté le padding pour plus d'espace
+    border-radius: 12px; // Coins arrondis
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Ombre légère pour donner du relief
+    border: 1px solid #e5e7eb; // Bordure subtile
 }
 
 .form-field {
     display: flex;
     flex-direction: column;
     margin: 10px 0;
+    width: 100%;
 }
 
 label {
@@ -26,8 +35,55 @@ app-collection-item-card {
     margin: 10px 0;
 }
 
+// Styles corrigés pour les boutons d'action
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    
+    .left, .right {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+    }
+    
+    button {
+        min-width: 80px;
+        white-space: nowrap;
+        padding: 0.5rem 1rem;
+        
+        &.danger {
+            background-color: #dc2626;
+            color: white;
+            
+            &:hover {
+                background-color: #b91c1c;
+            }
+        }
+    }
+}
+
 :host {
-     display: flex;
-     gap: 2rem;
-     justify-content: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        
+        form {
+            max-width: 100%;
+        }
+        
+        app-collection-item-card {
+            width: 100%;
+            max-width: 320px;
+        }
+    }
 }
